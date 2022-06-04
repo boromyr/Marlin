@@ -67,7 +67,7 @@
   #define Y_STOP_PIN                          37
 #else
   #define Y_MIN_PIN                           14
-  #define Y_MAX_PIN                           15
+  #define Y_MAX_PIN                           -1 //15
 #endif
 
 #if !MB(LONGER3D_LK1_PRO)
@@ -75,11 +75,28 @@
     #define Z_STOP_PIN                        35
   #else
     #define Z_MIN_PIN                         35
-    #define Z_MAX_PIN                         37
+    #define Z_MAX_PIN                         -1 //37
   #endif
 #else
   #define Z_MIN_PIN                           11
   #define Z_MAX_PIN                           37
+#endif
+
+#if HAS_TMC_UART
+  //
+  // Software serial
+  //
+  #define X_SERIAL_TX_PIN                   4
+  #define X_SERIAL_RX_PIN                   2
+
+  #define Y_SERIAL_TX_PIN                   5
+  #define Y_SERIAL_RX_PIN                   15
+
+  #define Z_SERIAL_TX_PIN                   6
+  #define Z_SERIAL_RX_PIN                   37
+
+  #define E0_SERIAL_TX_PIN                  11
+  #define E0_SERIAL_RX_PIN                  39
 #endif
 
 #undef CHANGE_Y_LIMIT_PINS

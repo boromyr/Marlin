@@ -57,9 +57,7 @@
 
     if (vp.addr == DGUS_Addr::SCREENCHANGE_SD) {
       #if ENABLED(SDSUPPORT)
-        #if !PIN_EXISTS(SD_DETECT)
-          card.mount();
-        #endif
+        IF_DISABLED(HAS_SD_DETECT, card.mount());
 
         if (!ExtUI::isMediaInserted()) {
           dgus_screen_handler.SetStatusMessage(GET_TEXT_F(MSG_NO_MEDIA));
@@ -377,7 +375,6 @@
   void DGUSRxHandler::Steppers(DGUS_VP &vp, void *data_ptr) {
     UNUSED(vp);
 
-    // uint16_t icons                   = 0;
     const DGUS_Data::Control control = (DGUS_Data::Control)((uint8_t *)data_ptr)[1];
 
     switch (control) {
@@ -389,7 +386,6 @@
         break;
     }
 
-    // dgus_display.Write((uint16_t)vp.addr, Swap16(icons));
     dgus_screen_handler.TriggerFullUpdate();
   }
 

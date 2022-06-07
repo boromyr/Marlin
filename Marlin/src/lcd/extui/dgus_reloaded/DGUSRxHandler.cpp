@@ -55,9 +55,9 @@
   void DGUSRxHandler::ScreenChange(DGUS_VP &vp, void *data_ptr) {
     const DGUS_Screen screen = (DGUS_Screen)((uint8_t *)data_ptr)[1];
 
-    if (vp.addr == DGUS_Addr::SCREENCHANGE_SD) {
-      #if ENABLED(SDSUPPORT)
-        IF_DISABLED(HAS_SD_DETECT, card.mount());
+  if (vp.addr == DGUS_Addr::SCREENCHANGE_SD) {
+    #if ENABLED(SDSUPPORT)
+      IF_DISABLED(HAS_SD_DETECT, card.mount());
 
         if (!ExtUI::isMediaInserted()) {
           dgus_screen_handler.SetStatusMessage(GET_TEXT_F(MSG_NO_MEDIA));

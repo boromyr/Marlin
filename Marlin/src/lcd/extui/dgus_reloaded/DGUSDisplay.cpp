@@ -207,7 +207,7 @@
 
   void DGUSDisplay::ProcessRx() {
 
-    #if ENABLED(LCD_SERIAL_STATS_RX_BUFFER_OVERRUNS)
+    #if ENABLED(SERIAL_STATS_RX_BUFFER_OVERRUNS)
       if (!LCD_SERIAL.available() && LCD_SERIAL.buffer_overruns()) {
         // Overrun, but reset the flag only when the buffer is empty
         // We want to extract as many as valid datagrams possible...

@@ -1769,7 +1769,7 @@
 
   #define DGUS_RX_BUFFER_SIZE                      128
   #define DGUS_TX_BUFFER_SIZE                      48
-  // #define SERIAL_STATS_RX_BUFFER_OVERRUNS  // Fix Rx overrun situation (Currently only for AVR)
+  #define SERIAL_STATS_RX_BUFFER_OVERRUNS              // Fix Rx overrun situation (Currently only for AVR)
 
   #define DGUS_UPDATE_INTERVAL_MS                  333 // (ms) Interval between automatic screen updates
 
@@ -2380,7 +2380,7 @@
 #define SERIAL_OVERRUN_PROTECTION
 
 // For serial echo, the number of digits after the decimal point
-// #define SERIAL_FLOAT_PRECISION 4
+#define SERIAL_FLOAT_PRECISION    4
 
 /**
   * Set the number of proportional font spaces required to fill up a typical character space.
@@ -2745,7 +2745,6 @@
   * https://github.com/teemuatlut/TMCStepper
   */
 #if HAS_TRINAMIC_CONFIG
-
   #define HOLD_MULTIPLIER     0.5 // Scales down the holding current from run current
 
   /**
@@ -2755,7 +2754,7 @@
   #define INTERPOLATE         true
 
   #if AXIS_IS_TMC(X)
-    #define X_CURRENT         1000       // (mA) RMS current. Multiply by 1.414 for peak current.
+    #define X_CURRENT         1000      // (mA) RMS current. Multiply by 1.414 for peak current.
     #define X_CURRENT_HOME    X_CURRENT // (mA) RMS current for sensorless homing
     #define X_MICROSTEPS      16        // 0..256
     #define X_RSENSE          0.11
@@ -3128,11 +3127,11 @@
     */
   #define HYBRID_THRESHOLD
 
-  #define X_HYBRID_THRESHOLD    100 // [mm/s]
+  #define X_HYBRID_THRESHOLD   100 // [mm/s]
   // #define X2_HYBRID_THRESHOLD   100
-  #define Y_HYBRID_THRESHOLD    100
+  #define Y_HYBRID_THRESHOLD   100
   // #define Y2_HYBRID_THRESHOLD   100
-  #define Z_HYBRID_THRESHOLD    3
+  #define Z_HYBRID_THRESHOLD   3
   // #define Z2_HYBRID_THRESHOLD   3
   // #define Z3_HYBRID_THRESHOLD   3
   // #define Z4_HYBRID_THRESHOLD   3
@@ -3208,7 +3207,7 @@
     *
     * Values from 0..1023, -1 to disable homing phase for that axis.
     */
-  // #define TMC_HOME_PHASE { 896, 896, 896 }
+  #define TMC_HOME_PHASE { 896, 896, 896 }
 
   /**
     * Beta feature!
@@ -3974,7 +3973,7 @@
 // #define MEATPACK_ON_SERIAL_PORT_1
 // #define MEATPACK_ON_SERIAL_PORT_2
 
-// #define GCODE_CASE_INSENSITIVE  // Accept G-code sent to the firmware in lowercase
+#define GCODE_CASE_INSENSITIVE  // Accept G-code sent to the firmware in lowercase
 
 // #define REPETIER_GCODE_M360     // Add commands originally from Repetier FW
 

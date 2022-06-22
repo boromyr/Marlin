@@ -1033,7 +1033,8 @@
   * Override with M92
   *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
   */
-#define DEFAULT_AXIS_STEPS_PER_UNIT    { 79.9681, 78.9944, 397.9901, 97.149 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT    { 79.95, 79.55, 397.83, 97.149 }
+
 
 /**
   * Default Max Feed Rate (linear=mm/s, rotational=°/s)
@@ -1068,9 +1069,9 @@
   *   M204 R    Retract Acceleration
   *   M204 T    Travel Acceleration
   */
-#define DEFAULT_ACCELERATION           3000 // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_ACCELERATION           1000 // X, Y, Z and E acceleration for printing moves
 #define DEFAULT_RETRACT_ACCELERATION   3000 // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION    3000 // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_TRAVEL_ACCELERATION    2000 // X, Y, Z acceleration for travel (non printing) moves
 
 /**
   * Default Jerk limits (mm/s)
@@ -1110,7 +1111,7 @@
   *   https://blog.kyneticcnc.com/2018/10/computing-junction-deviation-for-marlin.html
   */
 #if DISABLED(CLASSIC_JERK)
-  #define JUNCTION_DEVIATION_MM      0.013 // (mm) Distance from real junction edge
+  #define JUNCTION_DEVIATION_MM      0.022 // (mm) Distance from real junction edge
   #define JD_HANDLE_SMALL_SEGMENTS         // Use curvature estimation instead of just the junction angle
                                            // for small segments (< 1mm) with large junction angles (> 135°).
 #endif
@@ -1510,8 +1511,8 @@
 // @section machine
 
 // The size of the printable area
-#define X_BED_SIZE   200
-#define Y_BED_SIZE   200
+#define X_BED_SIZE   220
+#define Y_BED_SIZE   220
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
 #define X_MIN_POS    0
@@ -1519,7 +1520,7 @@
 #define Z_MIN_POS    0
 #define X_MAX_POS    X_BED_SIZE
 #define Y_MAX_POS    Y_BED_SIZE
-#define Z_MAX_POS    200
+#define Z_MAX_POS    250
 // #define I_MIN_POS 0
 // #define I_MAX_POS 50
 // #define J_MIN_POS 0
@@ -1704,7 +1705,7 @@
 /**
   * Auto-leveling needs preheating
   */
-// #define PREHEAT_BEFORE_LEVELING
+#define PREHEAT_BEFORE_LEVELING
 #if ENABLED(PREHEAT_BEFORE_LEVELING)
   #define LEVELING_NOZZLE_TEMP   120 // (°C) Only applies to E0 at this time
   #define LEVELING_BED_TEMP      50
@@ -1728,14 +1729,14 @@
   // The height can be set with M420 Z<height>
   #define ENABLE_LEVELING_FADE_HEIGHT
   #if ENABLED(ENABLE_LEVELING_FADE_HEIGHT)
-    #define DEFAULT_LEVELING_FADE_HEIGHT   10.0 // (mm) Default fade height.
+    #define DEFAULT_LEVELING_FADE_HEIGHT   15.0 // (mm) Default fade height.
   #endif
 
   // For Cartesian machines, instead of dividing moves on mesh boundaries,
   // split up moves into short segments like a Delta. This follows the
   // contours of the bed more closely than edge-to-edge straight moves.
   #define SEGMENT_LEVELED_MOVES
-  #define LEVELED_SEGMENT_LENGTH     5.0 // (mm) Length of all segments (except the last one)
+  #define LEVELED_SEGMENT_LENGTH     1.0 // (mm) Length of all segments (except the last one)
 
   /**
     * Enable the G26 Mesh Validation Pattern tool.
@@ -1834,7 +1835,7 @@
 #if ENABLED(LCD_BED_TRAMMING)
   #define BED_TRAMMING_INSET_LFRB          { 30, 30, 30, 30 } // (mm) Left, Front, Right, Back insets
   #define BED_TRAMMING_HEIGHT              0.0 // (mm) Z height of nozzle at leveling points
-  #define BED_TRAMMING_Z_HOP               4.0 // (mm) Z height of nozzle between leveling points
+  #define BED_TRAMMING_Z_HOP               5.0 // (mm) Z height of nozzle between leveling points
   // #define BED_TRAMMING_INCLUDE_CENTER       // Move to the center after the last corner
   // #define BED_TRAMMING_USE_PROBE
   #if ENABLED(BED_TRAMMING_USE_PROBE)
@@ -1994,7 +1995,7 @@
 // every couple of seconds when it can't accept commands.
 //
 #define HOST_KEEPALIVE_FEATURE         // Disable this if your host doesn't like keepalive messages
-#define DEFAULT_KEEPALIVE_INTERVAL   2 // Number of seconds between "busy" messages. Set with M113.
+#define DEFAULT_KEEPALIVE_INTERVAL   5 // Number of seconds between "busy" messages. Set with M113.
 #define BUSY_WHILE_HEATING             // Some hosts require "busy" messages even during heating
 
 //
@@ -2162,7 +2163,7 @@
   */
 #define PRINTCOUNTER
 #if ENABLED(PRINTCOUNTER)
-  #define PRINTCOUNTER_SAVE_INTERVAL   60 // (minutes) EEPROM save interval during print
+  #define PRINTCOUNTER_SAVE_INTERVAL   30 // (minutes) EEPROM save interval during print
 #endif
 
 /**

@@ -4284,7 +4284,6 @@
   #define MAX7219_DIN_PIN               57
   #define MAX7219_LOAD_PIN              44
 
-  // #define MAX7219_GCODE          // Add the M7219 G-code to control the LED matrix
   #define MAX7219_INIT_TEST             2 // Test pattern at startup: 0=none, 1=sweep, 2=spiral
   #define MAX7219_NUMBER_UNITS          1 // Number of Max7219 units in chain.
   #define MAX7219_ROTATE                0 // Rotate the display clockwise (in multiples of +/- 90°)
@@ -4304,31 +4303,6 @@
                                           // If you experience stuttering, reboots, etc. this option can reveal how
                                           // tweaks made to the configuration are affecting the printer in real-time.
 #endif
-
-/**
-  * NanoDLP Sync support
-  *
-  * Support for Synchronized Z moves when used with NanoDLP. G0/G1 axis moves will
-  * output a "Z_move_comp" string to enable synchronization with DLP projector exposure.
-  * This feature allows you to use [[WaitForDoneMessage]] instead of M400 commands.
-  */
-// #define NANODLP_Z_SYNC
-#if ENABLED(NANODLP_Z_SYNC)
-  // #define NANODLP_ALL_AXIS  // Send a "Z_move_comp" report for any axis move (not just Z).
-#endif
-
-/**
-  * Ethernet. Use M552 to enable and set the IP address.
-  */
-#if HAS_ETHERNET
-  #define MAC_ADDRESS   { 0xDE, 0xAD, 0xBE, 0xEF, 0xF0, 0x0D } // A MAC address unique to your network
-#endif
-
-/**
-  * WiFi Support (Espressif ESP32 WiFi)
-  */
-// #define WIFISUPPORT         // Marlin embedded WiFi managenent
-// #define ESP3D_WIFISUPPORT   // ESP3D Library WiFi management (https://github.com/luc-github/ESP3DLib)
 
 #if EITHER(WIFISUPPORT, ESP3D_WIFISUPPORT)
   // #define WEBSUPPORT          // Start a webserver (which may include auto-discovery)

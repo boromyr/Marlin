@@ -52,12 +52,13 @@
              DGUS_MSG_BED_PID_DISABLED[] PROGMEM = "Bed PID disabled",
              DGUS_MSG_EXT_PID_DISABLED[] PROGMEM = "Extruder PID disabled",
              DGUS_MSG_FEATURE_NOT_ENABLED[] PROGMEM = "Feature is not enabled";
+
   void DGUSRxHandler::ScreenChange(DGUS_VP &vp, void *data_ptr) {
     const DGUS_Screen screen = (DGUS_Screen)((uint8_t *)data_ptr)[1];
 
-  if (vp.addr == DGUS_Addr::SCREENCHANGE_SD) {
-    #if ENABLED(SDSUPPORT)
-      IF_DISABLED(HAS_SD_DETECT, card.mount());
+    if (vp.addr == DGUS_Addr::SCREENCHANGE_SD) {
+      #if ENABLED(SDSUPPORT)
+        IF_DISABLED(HAS_SD_DETECT, card.mount());
 
         if (!ExtUI::isMediaInserted()) {
           dgus_screen_handler.SetStatusMessage(GET_TEXT_F(MSG_NO_MEDIA));
@@ -546,7 +547,6 @@
       queue.enqueue_now(F("G29P1\nG29P3\nG29P5C"));
     #else
       queue.enqueue_now(F("G29"));
-      queue.enqueue_now(F("M500"));
     #endif
     queue.enqueue_now_P(DGUS_CMD_EEPROM_SAVE);
   }

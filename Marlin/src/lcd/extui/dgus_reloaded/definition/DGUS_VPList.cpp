@@ -99,7 +99,7 @@
     VP_HELPER_RX(DGUS_Addr::STATUS_Pause,  &DGUSRxHandler::PrintPause),
     VP_HELPER_RX(DGUS_Addr::STATUS_Resume, &DGUSRxHandler::PrintResume),
 
-    VP_HELPER_RX(DGUS_Addr::ADJUST_SetFeedrate,     &DGUSRxHandler::Feedrate),
+    VP_HELPER_RX(DGUS_Addr::STATUS_Feedrate_MMS,     &DGUSRxHandler::Feedrate),
     VP_HELPER_RX(DGUS_Addr::ADJUST_SetFlowrate_CUR, &DGUSRxHandler::Flowrate),
     #if HAS_MULTI_EXTRUDER
       VP_HELPER_RX(DGUS_Addr::ADJUST_SetFlowrate_E0,  &DGUSRxHandler::Flowrate),

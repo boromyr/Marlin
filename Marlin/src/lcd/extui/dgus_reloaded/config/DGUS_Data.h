@@ -151,4 +151,4 @@ namespace DGUS_Data {
     CONTINUE = 1U << 1
   };
 
-}
+};

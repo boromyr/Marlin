@@ -233,7 +233,7 @@
 
     switch (vp.addr) {
       default: return;
-      case DGUS_Addr::ADJUST_SetFlowrate_CUR:
+      case DGUS_Addr::ADJUST_Flowrate:
         ExtUI::setFlow_percent(flowrate, TERN(HAS_MULTI_EXTRUDER, ExtUI::getActiveTool(), ExtUI::E0));
         break;
         #if HAS_MULTI_EXTRUDER
@@ -1036,7 +1036,7 @@
     uint8_t speed = ((uint8_t *)data_ptr)[1];
     switch (vp.addr) {
       default: return;
-      case DGUS_Addr::FAN0_Speed:
+      case DGUS_Addr::STATUS_FanSpeed:
         ExtUI::setTargetFan_percent(speed, ExtUI::FAN0);
         break;
     }

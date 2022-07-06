@@ -241,7 +241,7 @@
 
     switch (vp.addr) {
       default: return;
-      case DGUS_Addr::ADJUST_Flowrate_CUR:
+      case DGUS_Addr::ADJUST_Flowrate:
         flowrate = ExtUI::getFlow_percent(TERN(HAS_MULTI_EXTRUDER, ExtUI::getActiveTool(), ExtUI::E0));
         break;
         #if HAS_MULTI_EXTRUDER
@@ -576,7 +576,7 @@
 
     switch (vp.addr) {
       default: return;
-      case DGUS_Addr::FAN0_Speed: fan_speed = ExtUI::getTargetFan_percent(ExtUI::FAN0); break;
+      case DGUS_Addr::STATUS_FanSpeed: fan_speed = ExtUI::getTargetFan_percent(ExtUI::FAN0); break;
     }
 
     dgus_display.Write((uint16_t)vp.addr, Swap16(fan_speed));
@@ -584,7 +584,8 @@
 
   void DGUSTxHandler::FeedrateMMS(DGUS_VP& vp) {
     // TODO: Read value from planner/stepper?
-    const int16_t data = dgus_display.ToFixedPoint<float, int16_t, 0>(MMS_SCALED(feedrate_mm_s));
+    // const int16_t data = dgus_display.ToFixedPoint<float, int16_t, 0>(MMS_SCALED(feedrate_mm_s));
+    const int16_t data = dgus_display.ToFixedPoint<float, int16_t, 0>(ExtUI::getFeedrate_percent());
     dgus_display.Write((uint16_t)vp.addr, Swap16(data));
   }
 

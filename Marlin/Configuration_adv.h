@@ -1186,7 +1186,7 @@
   * vibration and surface artifacts. The algorithm adapts to provide the best possible step smoothing at the
   * lowest stepping frequencies.
   */
-#define ADAPTIVE_STEP_SMOOTHING
+// #define ADAPTIVE_STEP_SMOOTHING
 
 /**
   * Custom Microstepping
@@ -3050,8 +3050,8 @@
     * Use Trinamic's ultra quiet stepping mode.
     * When disabled, Marlin will use spreadCycle stepping mode.
     */
-  #define STEALTHCHOP_XY
-  #define STEALTHCHOP_Z
+  // #define STEALTHCHOP_XY
+  // #define STEALTHCHOP_Z
   // #define STEALTHCHOP_I
   // #define STEALTHCHOP_J
   // #define STEALTHCHOP_K
@@ -3125,7 +3125,7 @@
     * STEALTHCHOP_(XY|Z|E) must be enabled to use HYBRID_THRESHOLD.
     * M913 X/Y/Z/E to live tune the setting
     */
-  #define HYBRID_THRESHOLD
+  // #define HYBRID_THRESHOLD
 
   #define X_HYBRID_THRESHOLD   100 // [mm/s]
   // #define X2_HYBRID_THRESHOLD   100
@@ -3207,7 +3207,7 @@
     *
     * Values from 0..1023, -1 to disable homing phase for that axis.
     */
-  #define TMC_HOME_PHASE { 896, 896, 896 }
+  // #define TMC_HOME_PHASE { 896, 896, 896 }
 
   /**
     * Beta feature!
@@ -3973,7 +3973,7 @@
 // #define MEATPACK_ON_SERIAL_PORT_1
 // #define MEATPACK_ON_SERIAL_PORT_2
 
-#define GCODE_CASE_INSENSITIVE  // Accept G-code sent to the firmware in lowercase
+#define GCODE_CASE_INSENSITIVE // Accept G-code sent to the firmware in lowercase
 
 // #define REPETIER_GCODE_M360     // Add commands originally from Repetier FW
 

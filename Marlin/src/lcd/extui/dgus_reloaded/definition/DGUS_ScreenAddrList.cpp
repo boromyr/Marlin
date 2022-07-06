@@ -61,8 +61,8 @@
     DGUS_Addr::STATUS_Icons,
     DGUS_Addr::SD_SelectedFileName,
     DGUS_Addr::SP_STATUS_Filename,
-    DGUS_Addr::FAN0_Speed_CUR,
-    DGUS_Addr::STATUS_Feedrate_MMS,
+    DGUS_Addr::STATUS_FanSpeed,
+    DGUS_Addr::STATUS_Feedrate,
     DGUS_Addr::STATUS_Pause_Resume_Icon,
     (DGUS_Addr)0
   };
@@ -72,9 +72,9 @@
     DGUS_Addr::TEMP_Target_H0,
     DGUS_Addr::TEMP_Current_Bed,
     DGUS_Addr::TEMP_Target_Bed,
-    DGUS_Addr::FAN0_Speed,
+    DGUS_Addr::ADJUST_FanSped,
     DGUS_Addr::ADJUST_Feedrate,
-    DGUS_Addr::ADJUST_Flowrate_CUR,
+    DGUS_Addr::ADJUST_Flowrate,
     DGUS_Addr::LEVEL_OFFSET_Current,
     (DGUS_Addr)0
   };
@@ -109,7 +109,7 @@
   };
 
   constexpr DGUS_Addr LIST_FAN[] PROGMEM = {
-    DGUS_Addr::FAN0_Speed,
+    DGUS_Addr::STATUS_FanSpeed,
     (DGUS_Addr)0
   };
 

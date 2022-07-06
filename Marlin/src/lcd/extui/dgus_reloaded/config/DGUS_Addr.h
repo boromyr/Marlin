@@ -91,8 +91,8 @@ enum class DGUS_Addr : uint16_t {
   STATUS_Abort             = 0x2007, // Popup / Data: DGUS_Data::Popup
   STATUS_Pause             = 0x2008, // Popup / Data: DGUS_Data::Popup
   STATUS_Resume            = 0x2009, // Popup / Data: DGUS_Data::Popup
-  ADJUST_SetFeedrate       = 0x200A, // Type: Integer (16 bits signed)
-  ADJUST_SetFlowrate_CUR   = 0x200B, // Type: Integer (16 bits signed)
+  // ADJUST_SetFeedrate       = 0x200A, // Type: Integer (16 bits signed) RX
+  // ADJUST_SetFlowrate_CUR   = 0x200B, // Type: Integer (16 bits signed) RX
   #if HAS_MULTI_EXTRUDER
     ADJUST_SetFlowrate_E0  = 0x200C, // Type: Integer (16 bits signed)
     ADJUST_SetFlowrate_E1  = 0x200D, // Type: Integer (16 bits signed)
@@ -153,8 +153,8 @@ enum class DGUS_Addr : uint16_t {
   STATUS_Ellapsed          = 0x30E7, // 0x30E7 - 0x30F5
   STATUS_Percent           = 0x30F6, // Type: Integer (16 bits unsigned)
   STATUS_Icons             = 0x30F7, // Bits: DGUS_Data::StatusIcon
-  ADJUST_Feedrate          = 0x30F8, // Type: Integer (16 bits signed)
-  ADJUST_Flowrate_CUR      = 0x30F9, // Type: Integer (16 bits signed)
+  // ADJUST_Feedrate          = 0x30F8, // Type: Integer (16 bits signed)
+  // ADJUST_Flowrate_CUR      = 0x30F9, // Type: Integer (16 bits signed)
   #if HAS_MULTI_EXTRUDER
     ADJUST_Flowrate_E0     = 0x30FA, // Type: Integer (16 bits signed)
     ADJUST_Flowrate_E1     = 0x30FB, // Type: Integer (16 bits signed)
@@ -198,14 +198,14 @@ enum class DGUS_Addr : uint16_t {
   INFOS_LongestPrint       = 0x318D, // 0x318D - 0x31A4
   INFOS_FilamentUsed       = 0x31A5, // 0x31A5 - 0x31BC
   WAIT_Icons               = 0x31BD, // Bits: DGUS_Data::WaitIcon
-  STATUS_Feedrate_MMS      = 0x31BF,
-  FAN0_Speed_CUR           = 0x31C1,
+  // STATUS_Feedrate_MMS      = 0x30F8, // 0x31BF,
+  // FAN0_Speed_CUR           = 0x31C1,
   MOVE_CurrentE            = 0x31C3, // Type: Fixed point, 1 decimal (16 bits signed)
   STATUS_Pause_Resume_Icon = 0x31C5, // 1 byte 0: resume, 1: pause
 
   // READ-WRITE VARIABLES
 
-  FAN0_Speed               = 0x4000, // Type: Integer (16 bits unsigned) / Data: fan speed as percent (0-100)
+  // FAN0_Speed               = 0x4000, // Type: Integer (16 bits unsigned) / Data: fan speed as percent (0-100)
   GCODE_Data               = 0x4001, // 0x4001 - 0x4020
   PID_Cycles               = 0x4021, // Type: Integer (16 bits unsigned)
   VOLUME_Level             = 0x4022, // Type: Integer (16 bits unsigned) / Data: volume as percent (0-100)
@@ -233,6 +233,16 @@ enum class DGUS_Addr : uint16_t {
   Min_Travel_Speed         = 0x4051, // int 3.1
   Z_Steps_mm               = 0x4053, // long 4.2
   E_Steps_mm               = 0x4057, // long 4.2
+
+  // CONTROLS
+
+  ADJUST_Feedrate          = 0x500A, // Type: Integer (16 bits signed) RX
+  ADJUST_Flowrate          = 0x500B, // Type: Integer (16 bits signed) RX
+  ADJUST_FanSped           = 0x500C,
+
+  STATUS_Feedrate          = 0x5001,
+  STATUS_FlowRate          = 0x5002,
+  STATUS_FanSpeed          = 0x5003, // Type: Integer (16 bits unsigned) / Data: fan speed as percent (0-100)
 
   // SPECIAL CASES
 

@@ -103,10 +103,13 @@
 
     VP_HELPER_RX(DGUS_Addr::ADJUST_Feedrate, &DGUSRxHandler::Feedrate),
     VP_HELPER_RX(DGUS_Addr::ADJUST_Flowrate, &DGUSRxHandler::Flowrate),
+    VP_HELPER_RX(DGUS_Addr::ADJUST_FanSpeed, &DGUSRxHandler::FanSpeed),
+    
     #if HAS_MULTI_EXTRUDER
       VP_HELPER_RX(DGUS_Addr::ADJUST_SetFlowrate_E0, &DGUSRxHandler::Flowrate),
       VP_HELPER_RX(DGUS_Addr::ADJUST_SetFlowrate_E1, &DGUSRxHandler::Flowrate),
     #endif
+    
     VP_HELPER_RX(DGUS_Addr::ADJUST_SetBabystep, &DGUSRxHandler::BabystepSet),
     VP_HELPER_RX(DGUS_Addr::ADJUST_Babystep, &DGUSRxHandler::Babystep),
 
@@ -180,8 +183,7 @@
     VP_HELPER_TX_AUTO(DGUS_Addr::STATUS_Percent, nullptr, &DGUSTxHandler::Percent),
     VP_HELPER_TX(DGUS_Addr::STATUS_Icons, &DGUSTxHandler::StatusIcons),
 
-    VP_HELPER_TX_AUTO(DGUS_Addr::STATUS_Feedrate, &feedrate_percentage, &DGUSTxHandler::ExtraToInteger<int16_t>),
-    VP_HELPER_TX_AUTO(DGUS_Addr::STATUS_FlowRate, nullptr, &DGUSTxHandler::Flowrate),
+
 
     #if HAS_MULTI_EXTRUDER
       VP_HELPER_TX_AUTO(DGUS_Addr::ADJUST_Flowrate_E0, nullptr, &DGUSTxHandler::Flowrate),
@@ -245,12 +247,15 @@
     VP_HELPER_TX(DGUS_Addr::WAIT_Icons, &DGUSTxHandler::WaitIcons),
     VP_HELPER_TX_AUTO(DGUS_Addr::STATUS_FanSpeed, nullptr, &DGUSTxHandler::FanSpeed),
     VP_HELPER_TX_AUTO(DGUS_Addr::STATUS_Feedrate, nullptr, &DGUSTxHandler::FeedrateMMS),
+    VP_HELPER_TX_AUTO(DGUS_Addr::STATUS_FlowRate, nullptr, &DGUSTxHandler::Flowrate),
+    // VP_HELPER_TX_AUTO(DGUS_Addr::STATUS_Feedrate, &feedrate_percentage, &DGUSTxHandler::ExtraToInteger<int16_t>),
+
     VP_HELPER_TX_AUTO(DGUS_Addr::STATUS_Pause_Resume_Icon, nullptr, &DGUSTxHandler::StatusIcons),
 
     // READ-WRITE VARIABLES
 
-    VP_HELPER(DGUS_Addr::ADJUST_FanSped, 2,
-      VPFLAG_AUTOUPLOAD, nullptr, &DGUSRxHandler::FanSpeed, &DGUSTxHandler::FanSpeed),
+    // VP_HELPER(DGUS_Addr::ADJUST_FanSpeed, 2,
+    //   VPFLAG_AUTOUPLOAD, nullptr, &DGUSRxHandler::FanSpeed, &DGUSTxHandler::FanSpeed),
 
     VP_HELPER(DGUS_Addr::GCODE_Data, DGUS_GCODE_LEN,
       VPFLAG_RXSTRING, (void *)DGUSScreenHandler::gcode, &DGUSRxHandler::StringToExtra, &DGUSTxHandler::ExtraToString),

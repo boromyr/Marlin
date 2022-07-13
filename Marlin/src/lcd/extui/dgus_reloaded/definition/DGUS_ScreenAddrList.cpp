@@ -72,7 +72,7 @@
     DGUS_Addr::TEMP_Target_H0,
     DGUS_Addr::TEMP_Current_Bed,
     DGUS_Addr::TEMP_Target_Bed,
-    DGUS_Addr::ADJUST_FanSped,
+    DGUS_Addr::ADJUST_FanSpeed,
     DGUS_Addr::ADJUST_Feedrate,
     DGUS_Addr::ADJUST_Flowrate,
     DGUS_Addr::LEVEL_OFFSET_Current,

@@ -238,7 +238,7 @@ enum class DGUS_Addr : uint16_t {
 
   ADJUST_Feedrate          = 0x500A, // Type: Integer (16 bits signed) RX
   ADJUST_Flowrate          = 0x500B, // Type: Integer (16 bits signed) RX
-  ADJUST_FanSped           = 0x500C,
+  ADJUST_FanSpeed          = 0x500C,
 
   STATUS_Feedrate          = 0x5001,
   STATUS_FlowRate          = 0x5002,

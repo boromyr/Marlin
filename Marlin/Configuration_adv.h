@@ -22,15 +22,15 @@
 #pragma once
 
 /**
-  * Configuration_adv.h
-  *
-  * Advanced settings.
-  * Only change these if you know exactly what you're doing.
-  * Some of these settings can damage your printer if improperly set!
-  *
-  * Basic settings can be found in Configuration.h
-  */
-#define CONFIGURATION_ADV_H_VERSION   02010000
+ * Configuration_adv.h
+ *
+ * Advanced settings.
+ * Only change these if you know exactly what you're doing.
+ * Some of these settings can damage your printer if improperly set!
+ *
+ * Basic settings can be found in Configuration.h
+ */
+#define CONFIGURATION_ADV_H_VERSION 02010100
 
 // ===========================================================================
 // ============================= Thermal Settings ============================
@@ -1319,6 +1319,9 @@
       #define XATC_Y_POSITION   Y_CENTER // (mm) Y position to probe
       #define XATC_Z_OFFSETS    { 0, 0, 0 } // Z offsets for X axis sample points
     #endif
+
+    // Show Deploy / Stow Probe options in the Motion menu.
+    #define PROBE_DEPLOY_STOW_MENU
   #endif
 
   // Include a page of printer information in the LCD Main Menu
@@ -1336,8 +1339,8 @@
 #endif // HAS_MARLINUI_MENU
 
 #if ANY(HAS_DISPLAY, DWIN_LCD_PROUI, DWIN_CREALITY_LCD_JYERSUI)
-  // #define SOUND_MENU_ITEM   // Add a mute option to the LCD menu
-  #define SOUND_ON_DEFAULT // Buzzer/speaker default enabled state
+  //#define SOUND_MENU_ITEM   // Add a mute option to the LCD menu
+  #define SOUND_ON_DEFAULT    // Buzzer/speaker default enabled state
 #endif
 
 #if EITHER(HAS_DISPLAY, DWIN_LCD_PROUI)
@@ -3668,8 +3671,8 @@
     #endif
 
     // Define the minimum and maximum test pulse time values for a laser test fire function
-    #define LASER_TEST_PULSE_MIN            1    // Used with Laser Control Menu
-    #define LASER_TEST_PULSE_MAX            999  // Caution: Menu may not show more than 3 characters
+    #define LASER_TEST_PULSE_MIN           1   // Used with Laser Control Menu
+    #define LASER_TEST_PULSE_MAX         999   // Caution: Menu may not show more than 3 characters
 
     /**
       * Laser Safety Timeout
@@ -3742,12 +3745,12 @@
       // #define LASER_POWER_INLINE_INVERT
 
       /**
-        * Continuously apply inline power. ('M3 S3' == 'G1 S3' == 'M3 S3 I')
-        *
-        * The laser might do some weird things, so only enable this
-        * feature if you understand the implications.
-        */
-      // #define LASER_POWER_INLINE_CONTINUOUS
+       * Continuously apply inline power. ('M3 S3' == 'G1 S3' == 'M3 S3 I')
+       *
+       * The laser might do some weird things, so only enable this
+       * feature if you understand the implications.
+       */
+      //#define LASER_POWER_INLINE_CONTINUOUS
 
     #else
 

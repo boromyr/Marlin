@@ -22,20 +22,20 @@
 #pragma once
 
 /**
-  * Configuration.h
-  *
-  * Basic settings such as:
-  *
-  * - Type of electronics
-  * - Type of temperature sensor
-  * - Printer geometry
-  * - Endstop configuration
-  * - LCD controller
-  * - Extra features
-  *
-  * Advanced settings can be found in Configuration_adv.h
-  */
-#define CONFIGURATION_H_VERSION   02010000
+ * Configuration.h
+ *
+ * Basic settings such as:
+ *
+ * - Type of electronics
+ * - Type of temperature sensor
+ * - Printer geometry
+ * - Endstop configuration
+ * - LCD controller
+ * - Extra features
+ *
+ * Advanced settings can be found in Configuration_adv.h
+ */
+#define CONFIGURATION_H_VERSION 02010000
 
 // ===========================================================================
 // ============================= Getting Started =============================
@@ -57,14 +57,14 @@
   *                      https://www.thingiverse.com/thing:1278865
   */
 
-// ===========================================================================
-// ========================== DELTA / SCARA / TPARA ==========================
-// ===========================================================================
+//===========================================================================
+//========================== DELTA / SCARA / TPARA ==========================
+//===========================================================================
 //
 // Download configurations from the link above and customize for your machine.
 // Examples are located in config/examples/delta, .../SCARA, and .../TPARA.
 //
-// ===========================================================================
+//===========================================================================
 
 // @section info
 
@@ -888,9 +888,16 @@
   #define POLAR_SEGMENTS_PER_SECOND   5
 #endif
 
-// ===========================================================================
-// ============================== Endstop Settings ===========================
-// ===========================================================================
+// Enable for an articulated robot (robot arm). Joints are directly mapped to axes (no kinematics).
+//#define ARTICULATED_ROBOT_ARM
+
+// For a hot wire cutter with parallel horizontal axes (X, I) where the heights of the two wire
+// ends are controlled by parallel axes (Y, J). Joints are directly mapped to axes (no kinematics).
+//#define FOAMCUTTER_XYUV
+
+//===========================================================================
+//============================== Endstop Settings ===========================
+//===========================================================================
 
 // @section homing
 
@@ -1237,8 +1244,8 @@
 // A probe deployed by moving the x-axis, such as the Wilson II's rack-and-pinion probe designed by Marty Rice.
 // #define RACK_AND_PINION_PROBE
 #if ENABLED(RACK_AND_PINION_PROBE)
-  #define Z_PROBE_DEPLOY_X    X_MIN_POS
-  #define Z_PROBE_RETRACT_X   X_MAX_POS
+  #define Z_PROBE_DEPLOY_X  X_MIN_POS
+  #define Z_PROBE_RETRACT_X X_MAX_POS
 #endif
 
 // Duet Smart Effector (for delta printers) - https://bit.ly/2ul5U7J
@@ -1249,12 +1256,12 @@
 #endif
 
 /**
-  * Use StallGuard2 to probe the bed with the nozzle.
-  * Requires stallGuard-capable Trinamic stepper drivers.
-  * CAUTION: This can damage machines with Z lead screws.
-  *          Take extreme care when setting up this feature.
-  */
-// #define SENSORLESS_PROBING
+ * Use StallGuard2 to probe the bed with the nozzle.
+ * Requires stallGuard-capable Trinamic stepper drivers.
+ * CAUTION: This can damage machines with Z lead screws.
+ *          Take extreme care when setting up this feature.
+ */
+//#define SENSORLESS_PROBING
 
 //
 // For Z_PROBE_ALLEN_KEY see the Delta example configurations.
@@ -1833,11 +1840,11 @@
 #define LCD_BED_TRAMMING
 
 #if ENABLED(LCD_BED_TRAMMING)
-  #define BED_TRAMMING_INSET_LFRB          { 30, 30, 30, 30 } // (mm) Left, Front, Right, Back insets
-  #define BED_TRAMMING_HEIGHT              0.0 // (mm) Z height of nozzle at leveling points
-  #define BED_TRAMMING_Z_HOP               5.0 // (mm) Z height of nozzle between leveling points
-  // #define BED_TRAMMING_INCLUDE_CENTER       // Move to the center after the last corner
-  // #define BED_TRAMMING_USE_PROBE
+  #define BED_TRAMMING_INSET_LFRB { 30, 30, 30, 30 }  // (mm) Left, Front, Right, Back insets
+  #define BED_TRAMMING_HEIGHT      0.0        // (mm) Z height of nozzle at leveling points
+  #define BED_TRAMMING_Z_HOP       4.0        // (mm) Z height of nozzle between leveling points
+  //#define BED_TRAMMING_INCLUDE_CENTER       // Move to the center after the last corner
+  //#define BED_TRAMMING_USE_PROBE
   #if ENABLED(BED_TRAMMING_USE_PROBE)
     #define BED_TRAMMING_PROBE_TOLERANCE   0.1 // (mm)
     #define BED_TRAMMING_VERIFY_RAISED         // After adjustment triggers the probe, re-probe to verify
@@ -2646,11 +2653,11 @@
 // Silvergate GLCD controller
 // https://github.com/android444/Silvergate
 //
-// #define SILVER_GATE_GLCD_CONTROLLER
+//#define SILVER_GATE_GLCD_CONTROLLER
 
-// =============================================================================
-// ==============================  OLED Displays  ==============================
-// =============================================================================
+//=============================================================================
+//==============================  OLED Displays  ==============================
+//=============================================================================
 
 //
 // SSD1306 OLED full graphics generic display
@@ -2926,11 +2933,11 @@
 //
 // Ender-3 v2 OEM display. A DWIN display with Rotary Encoder.
 //
-// #define DWIN_CREALITY_LCD           // Creality UI
-// #define DWIN_LCD_PROUI              // Pro UI by MRiscoC
-// #define DWIN_CREALITY_LCD_JYERSUI   // Jyers UI by Jacob Myers
-// #define DWIN_MARLINUI_PORTRAIT      // MarlinUI (portrait orientation)
-// #define DWIN_MARLINUI_LANDSCAPE     // MarlinUI (landscape orientation)
+//#define DWIN_CREALITY_LCD           // Creality UI
+//#define DWIN_LCD_PROUI              // Pro UI by MRiscoC
+//#define DWIN_CREALITY_LCD_JYERSUI   // Jyers UI by Jacob Myers
+//#define DWIN_MARLINUI_PORTRAIT      // MarlinUI (portrait orientation)
+//#define DWIN_MARLINUI_LANDSCAPE     // MarlinUI (landscape orientation)
 
 //
 // Touch Screen Settings

@@ -125,7 +125,7 @@
 
 #define UART
 #ifdef UART
-  // #define TMC_BAUD_RATE   9600
+  #define TMC_BAUD_RATE   9600
 #endif
 
 #define DGUS_LCD_UI_RELOADED
@@ -135,7 +135,7 @@
 #endif
 
 #define LCD_HEIGHT       4 // number of message lines in the wait screen
-#define DEBUG_DGUSLCD
+// #define DEBUG_DGUSLCD
 // #define FILAMENT_RUNOUT_SENSOR_DEBUG
 
 /**
@@ -1131,7 +1131,7 @@
   *
   * See https://github.com/synthetos/TinyG/wiki/Jerk-Controlled-Motion-Explained
   */
-// #define S_CURVE_ACCELERATION
+#define S_CURVE_ACCELERATION
 
 // ===========================================================================
 // ============================= Z Probe Options =============================

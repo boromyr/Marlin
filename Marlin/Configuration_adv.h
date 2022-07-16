@@ -1772,7 +1772,7 @@
 
   #define DGUS_RX_BUFFER_SIZE                      128
   #define DGUS_TX_BUFFER_SIZE                      48
-  #define SERIAL_STATS_RX_BUFFER_OVERRUNS              // Fix Rx overrun situation (Currently only for AVR)
+  // #define SERIAL_STATS_RX_BUFFER_OVERRUNS              // Fix Rx overrun situation (Currently only for AVR)
 
   #define DGUS_UPDATE_INTERVAL_MS                  333 // (ms) Interval between automatic screen updates
 
@@ -2022,7 +2022,7 @@
   // #define EXTRA_LIN_ADVANCE_K // Enable for second linear advance constants
   #define LIN_ADVANCE_K   0.6 // Unit: mm compression per 1mm/s extruder speed
   // #define LA_DEBUG            // If enabled, this will generate debug information output over USB.
-  // #define EXPERIMENTAL_SCURVE // Enable this option to permit S-Curve Acceleration
+  #define EXPERIMENTAL_SCURVE // Enable this option to permit S-Curve Acceleration
   // #define ALLOW_LOW_EJERK     // Allow a DEFAULT_EJERK value of <10. Recommended for direct drive hotends.
 #endif
 
@@ -3134,7 +3134,7 @@
   // #define X2_HYBRID_THRESHOLD   100
   #define Y_HYBRID_THRESHOLD   100
   // #define Y2_HYBRID_THRESHOLD   100
-  #define Z_HYBRID_THRESHOLD   3
+  #define Z_HYBRID_THRESHOLD   5
   // #define Z2_HYBRID_THRESHOLD   3
   // #define Z3_HYBRID_THRESHOLD   3
   // #define Z4_HYBRID_THRESHOLD   3

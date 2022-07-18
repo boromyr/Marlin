@@ -22,15 +22,15 @@
 #pragma once
 
 /**
- * Configuration_adv.h
- *
- * Advanced settings.
- * Only change these if you know exactly what you're doing.
- * Some of these settings can damage your printer if improperly set!
- *
- * Basic settings can be found in Configuration.h
- */
-#define CONFIGURATION_ADV_H_VERSION 02010100
+  * Configuration_adv.h
+  *
+  * Advanced settings.
+  * Only change these if you know exactly what you're doing.
+  * Some of these settings can damage your printer if improperly set!
+  *
+  * Basic settings can be found in Configuration.h
+  */
+#define CONFIGURATION_ADV_H_VERSION   02010100
 
 // ===========================================================================
 // ============================= Thermal Settings ============================
@@ -48,13 +48,13 @@
   *
   * Set this value to 0 to fail on the first error to occur.
   */
-#define THERMOCOUPLE_MAX_ERRORS            15
+#define THERMOCOUPLE_MAX_ERRORS   15
 
 //
 // Custom Thermistor 1000 parameters
 //
 #if TEMP_SENSOR_0 == 1000
-<<<<<<< HEAD
+    << << <<< HEAD
   #define HOTEND0_PULLUP_RESISTOR_OHMS     4700   // Pullup resistor
   #define HOTEND0_RESISTANCE_25C_OHMS      100000 // Resistance at 25C
   #define HOTEND0_BETA                     3950   // Beta value
@@ -136,103 +136,103 @@
   #define REDUNDANT_PULLUP_RESISTOR_OHMS   4700   // Pullup resistor
   #define REDUNDANT_RESISTANCE_25C_OHMS    100000 // Resistance at 25C
   #define REDUNDANT_BETA                   3950   // Beta value
-=======
-  #define HOTEND0_PULLUP_RESISTOR_OHMS    4700 // Pullup resistor
-  #define HOTEND0_RESISTANCE_25C_OHMS   100000 // Resistance at 25C
-  #define HOTEND0_BETA                    3950 // Beta value
-  #define HOTEND0_SH_C_COEFF                 0 // Steinhart-Hart C coefficient
+  == == == =
+    #define HOTEND0_PULLUP_RESISTOR_OHMS   4700   // Pullup resistor
+    #define HOTEND0_RESISTANCE_25C_OHMS    100000 // Resistance at 25C
+    #define HOTEND0_BETA                   3950   // Beta value
+    #define HOTEND0_SH_C_COEFF             0      // Steinhart-Hart C coefficient
 #endif
 
 #if TEMP_SENSOR_1 == 1000
-  #define HOTEND1_PULLUP_RESISTOR_OHMS    4700 // Pullup resistor
-  #define HOTEND1_RESISTANCE_25C_OHMS   100000 // Resistance at 25C
-  #define HOTEND1_BETA                    3950 // Beta value
-  #define HOTEND1_SH_C_COEFF                 0 // Steinhart-Hart C coefficient
+  #define HOTEND1_PULLUP_RESISTOR_OHMS     4700   // Pullup resistor
+  #define HOTEND1_RESISTANCE_25C_OHMS      100000 // Resistance at 25C
+  #define HOTEND1_BETA                     3950   // Beta value
+  #define HOTEND1_SH_C_COEFF               0      // Steinhart-Hart C coefficient
 #endif
 
 #if TEMP_SENSOR_2 == 1000
-  #define HOTEND2_PULLUP_RESISTOR_OHMS    4700 // Pullup resistor
-  #define HOTEND2_RESISTANCE_25C_OHMS   100000 // Resistance at 25C
-  #define HOTEND2_BETA                    3950 // Beta value
-  #define HOTEND2_SH_C_COEFF                 0 // Steinhart-Hart C coefficient
+  #define HOTEND2_PULLUP_RESISTOR_OHMS     4700   // Pullup resistor
+  #define HOTEND2_RESISTANCE_25C_OHMS      100000 // Resistance at 25C
+  #define HOTEND2_BETA                     3950   // Beta value
+  #define HOTEND2_SH_C_COEFF               0      // Steinhart-Hart C coefficient
 #endif
 
 #if TEMP_SENSOR_3 == 1000
-  #define HOTEND3_PULLUP_RESISTOR_OHMS    4700 // Pullup resistor
-  #define HOTEND3_RESISTANCE_25C_OHMS   100000 // Resistance at 25C
-  #define HOTEND3_BETA                    3950 // Beta value
-  #define HOTEND3_SH_C_COEFF                 0 // Steinhart-Hart C coefficient
+  #define HOTEND3_PULLUP_RESISTOR_OHMS     4700   // Pullup resistor
+  #define HOTEND3_RESISTANCE_25C_OHMS      100000 // Resistance at 25C
+  #define HOTEND3_BETA                     3950   // Beta value
+  #define HOTEND3_SH_C_COEFF               0      // Steinhart-Hart C coefficient
 #endif
 
 #if TEMP_SENSOR_4 == 1000
-  #define HOTEND4_PULLUP_RESISTOR_OHMS    4700 // Pullup resistor
-  #define HOTEND4_RESISTANCE_25C_OHMS   100000 // Resistance at 25C
-  #define HOTEND4_BETA                    3950 // Beta value
-  #define HOTEND4_SH_C_COEFF                 0 // Steinhart-Hart C coefficient
+  #define HOTEND4_PULLUP_RESISTOR_OHMS     4700   // Pullup resistor
+  #define HOTEND4_RESISTANCE_25C_OHMS      100000 // Resistance at 25C
+  #define HOTEND4_BETA                     3950   // Beta value
+  #define HOTEND4_SH_C_COEFF               0      // Steinhart-Hart C coefficient
 #endif
 
 #if TEMP_SENSOR_5 == 1000
-  #define HOTEND5_PULLUP_RESISTOR_OHMS    4700 // Pullup resistor
-  #define HOTEND5_RESISTANCE_25C_OHMS   100000 // Resistance at 25C
-  #define HOTEND5_BETA                    3950 // Beta value
-  #define HOTEND5_SH_C_COEFF                 0 // Steinhart-Hart C coefficient
+  #define HOTEND5_PULLUP_RESISTOR_OHMS     4700   // Pullup resistor
+  #define HOTEND5_RESISTANCE_25C_OHMS      100000 // Resistance at 25C
+  #define HOTEND5_BETA                     3950   // Beta value
+  #define HOTEND5_SH_C_COEFF               0      // Steinhart-Hart C coefficient
 #endif
 
 #if TEMP_SENSOR_6 == 1000
-  #define HOTEND6_PULLUP_RESISTOR_OHMS    4700 // Pullup resistor
-  #define HOTEND6_RESISTANCE_25C_OHMS   100000 // Resistance at 25C
-  #define HOTEND6_BETA                    3950 // Beta value
-  #define HOTEND6_SH_C_COEFF                 0 // Steinhart-Hart C coefficient
+  #define HOTEND6_PULLUP_RESISTOR_OHMS     4700   // Pullup resistor
+  #define HOTEND6_RESISTANCE_25C_OHMS      100000 // Resistance at 25C
+  #define HOTEND6_BETA                     3950   // Beta value
+  #define HOTEND6_SH_C_COEFF               0      // Steinhart-Hart C coefficient
 #endif
 
 #if TEMP_SENSOR_7 == 1000
-  #define HOTEND7_PULLUP_RESISTOR_OHMS    4700 // Pullup resistor
-  #define HOTEND7_RESISTANCE_25C_OHMS   100000 // Resistance at 25C
-  #define HOTEND7_BETA                    3950 // Beta value
-  #define HOTEND7_SH_C_COEFF                 0 // Steinhart-Hart C coefficient
+  #define HOTEND7_PULLUP_RESISTOR_OHMS     4700   // Pullup resistor
+  #define HOTEND7_RESISTANCE_25C_OHMS      100000 // Resistance at 25C
+  #define HOTEND7_BETA                     3950   // Beta value
+  #define HOTEND7_SH_C_COEFF               0      // Steinhart-Hart C coefficient
 #endif
 
 #if TEMP_SENSOR_BED == 1000
-  #define BED_PULLUP_RESISTOR_OHMS        4700 // Pullup resistor
-  #define BED_RESISTANCE_25C_OHMS       100000 // Resistance at 25C
-  #define BED_BETA                        3950 // Beta value
-  #define BED_SH_C_COEFF                     0 // Steinhart-Hart C coefficient
+  #define BED_PULLUP_RESISTOR_OHMS         4700   // Pullup resistor
+  #define BED_RESISTANCE_25C_OHMS          100000 // Resistance at 25C
+  #define BED_BETA                         3950   // Beta value
+  #define BED_SH_C_COEFF                   0      // Steinhart-Hart C coefficient
 #endif
 
 #if TEMP_SENSOR_CHAMBER == 1000
-  #define CHAMBER_PULLUP_RESISTOR_OHMS    4700 // Pullup resistor
-  #define CHAMBER_RESISTANCE_25C_OHMS   100000 // Resistance at 25C
-  #define CHAMBER_BETA                    3950 // Beta value
-  #define CHAMBER_SH_C_COEFF                 0 // Steinhart-Hart C coefficient
+  #define CHAMBER_PULLUP_RESISTOR_OHMS     4700   // Pullup resistor
+  #define CHAMBER_RESISTANCE_25C_OHMS      100000 // Resistance at 25C
+  #define CHAMBER_BETA                     3950   // Beta value
+  #define CHAMBER_SH_C_COEFF               0      // Steinhart-Hart C coefficient
 #endif
 
 #if TEMP_SENSOR_COOLER == 1000
-  #define COOLER_PULLUP_RESISTOR_OHMS     4700 // Pullup resistor
-  #define COOLER_RESISTANCE_25C_OHMS    100000 // Resistance at 25C
-  #define COOLER_BETA                     3950 // Beta value
-  #define COOLER_SH_C_COEFF                  0 // Steinhart-Hart C coefficient
+  #define COOLER_PULLUP_RESISTOR_OHMS      4700   // Pullup resistor
+  #define COOLER_RESISTANCE_25C_OHMS       100000 // Resistance at 25C
+  #define COOLER_BETA                      3950   // Beta value
+  #define COOLER_SH_C_COEFF                0      // Steinhart-Hart C coefficient
 #endif
 
 #if TEMP_SENSOR_PROBE == 1000
-  #define PROBE_PULLUP_RESISTOR_OHMS      4700 // Pullup resistor
-  #define PROBE_RESISTANCE_25C_OHMS     100000 // Resistance at 25C
-  #define PROBE_BETA                      3950 // Beta value
-  #define PROBE_SH_C_COEFF                   0 // Steinhart-Hart C coefficient
+  #define PROBE_PULLUP_RESISTOR_OHMS       4700   // Pullup resistor
+  #define PROBE_RESISTANCE_25C_OHMS        100000 // Resistance at 25C
+  #define PROBE_BETA                       3950   // Beta value
+  #define PROBE_SH_C_COEFF                 0      // Steinhart-Hart C coefficient
 #endif
 
 #if TEMP_SENSOR_BOARD == 1000
-  #define BOARD_PULLUP_RESISTOR_OHMS      4700 // Pullup resistor
-  #define BOARD_RESISTANCE_25C_OHMS     100000 // Resistance at 25C
-  #define BOARD_BETA                      3950 // Beta value
-  #define BOARD_SH_C_COEFF                   0 // Steinhart-Hart C coefficient
+  #define BOARD_PULLUP_RESISTOR_OHMS       4700   // Pullup resistor
+  #define BOARD_RESISTANCE_25C_OHMS        100000 // Resistance at 25C
+  #define BOARD_BETA                       3950   // Beta value
+  #define BOARD_SH_C_COEFF                 0      // Steinhart-Hart C coefficient
 #endif
 
 #if TEMP_SENSOR_REDUNDANT == 1000
-  #define REDUNDANT_PULLUP_RESISTOR_OHMS  4700 // Pullup resistor
-  #define REDUNDANT_RESISTANCE_25C_OHMS 100000 // Resistance at 25C
-  #define REDUNDANT_BETA                  3950 // Beta value
-  #define REDUNDANT_SH_C_COEFF               0 // Steinhart-Hart C coefficient
->>>>>>> 9be1de54ae11b20cc3f47008080bc4afb80369c5
+  #define REDUNDANT_PULLUP_RESISTOR_OHMS   4700   // Pullup resistor
+  #define REDUNDANT_RESISTANCE_25C_OHMS    100000 // Resistance at 25C
+  #define REDUNDANT_BETA                   3950   // Beta value
+  #define REDUNDANT_SH_C_COEFF             0      // Steinhart-Hart C coefficient
+  >> >> >>> 9be1de54ae11b20cc3f47008080bc4afb80369c5
 #endif
 
 /**
@@ -487,8 +487,8 @@
       #define PID_FAN_SCALING_AT_MIN_SPEED    6.0  // =PID_FAN_SCALING_LIN_FACTOR*PID_FAN_SCALING_MIN_SPEED+DEFAULT_Kf
       #define PID_FAN_SCALING_MIN_SPEED       10.0 // Minimum fan speed at which to enable PID_FAN_SCALING
 
-      #define DEFAULT_Kf                      (255.0 * PID_FAN_SCALING_AT_MIN_SPEED - PID_FAN_SCALING_AT_FULL_SPEED * PID_FAN_SCALING_MIN_SPEED) / (255.0 - PID_FAN_SCALING_MIN_SPEED)
-      #define PID_FAN_SCALING_LIN_FACTOR      (PID_FAN_SCALING_AT_FULL_SPEED - DEFAULT_Kf) / 255.0
+      #define DEFAULT_Kf                      (255.0*PID_FAN_SCALING_AT_MIN_SPEED-PID_FAN_SCALING_AT_FULL_SPEED*PID_FAN_SCALING_MIN_SPEED)/(255.0-PID_FAN_SCALING_MIN_SPEED)
+      #define PID_FAN_SCALING_LIN_FACTOR      (PID_FAN_SCALING_AT_FULL_SPEED-DEFAULT_Kf)/255.0
 
     #else
       #define PID_FAN_SCALING_LIN_FACTOR      (0) // Power loss due to cooling = Kf * (fan_speed)
@@ -573,10 +573,10 @@
   */
 // #define HOTEND_IDLE_TIMEOUT
 #if ENABLED(HOTEND_IDLE_TIMEOUT)
-  #define HOTEND_IDLE_TIMEOUT_SEC     (5 * 60) // (seconds) Time without extruder movement to trigger protection
-  #define HOTEND_IDLE_MIN_TRIGGER     180      // (°C) Minimum temperature to enable hotend protection
-  #define HOTEND_IDLE_NOZZLE_TARGET   0        // (°C) Safe temperature for the nozzle after timeout
-  #define HOTEND_IDLE_BED_TARGET      0        // (°C) Safe temperature for the bed after timeout
+  #define HOTEND_IDLE_TIMEOUT_SEC     (5*60) // (seconds) Time without extruder movement to trigger protection
+  #define HOTEND_IDLE_MIN_TRIGGER     180    // (°C) Minimum temperature to enable hotend protection
+  #define HOTEND_IDLE_NOZZLE_TARGET   0      // (°C) Safe temperature for the nozzle after timeout
+  #define HOTEND_IDLE_BED_TARGET      0      // (°C) Safe temperature for the bed after timeout
 #endif
 
 // @section temperature
@@ -668,7 +668,7 @@
   // #define USE_OCR2A_AS_TOP
   #ifndef FAST_PWM_FAN_FREQUENCY
     #ifdef __AVR__
-      #define FAST_PWM_FAN_FREQUENCY   ((F_CPU) / (2 * 255 * 1))
+      #define FAST_PWM_FAN_FREQUENCY   ((F_CPU)/(2*255*1))
     #else
       #define FAST_PWM_FAN_FREQUENCY   1000U
     #endif
@@ -1359,8 +1359,8 @@
 // @section lcd
 
 #if HAS_MANUAL_MOVE_MENU
-  #define MANUAL_FEEDRATE             { 50 * 60, 50 * 60, 4 * 60, 2 * 60 } // (mm/min) Feedrates for manual moves along X, Y, Z, E from panel
-  #define FINE_MANUAL_MOVE            0.025 // (mm) Smallest manual move (< 0.1mm) applying to Z on most machines
+  #define MANUAL_FEEDRATE             { 50*60, 50*60, 4*60, 2*60 } // (mm/min) Feedrates for manual moves along X, Y, Z, E from panel
+  #define FINE_MANUAL_MOVE            0.025                        // (mm) Smallest manual move (< 0.1mm) applying to Z on most machines
   #if IS_ULTIPANEL
     #define MANUAL_E_MOVES_RELATIVE   // Display extruder move distance rather than "position"
     #define ULTIPANEL_FEEDMULTIPLY // Encoder sets the feedrate multiplier on the Status Screen
@@ -1437,8 +1437,8 @@
 #endif // HAS_MARLINUI_MENU
 
 #if ANY(HAS_DISPLAY, DWIN_LCD_PROUI, DWIN_CREALITY_LCD_JYERSUI)
-  //#define SOUND_MENU_ITEM   // Add a mute option to the LCD menu
-  #define SOUND_ON_DEFAULT    // Buzzer/speaker default enabled state
+  // #define SOUND_MENU_ITEM   // Add a mute option to the LCD menu
+  #define SOUND_ON_DEFAULT // Buzzer/speaker default enabled state
 #endif
 
 #if EITHER(HAS_DISPLAY, DWIN_LCD_PROUI)
@@ -1560,10 +1560,10 @@
 
   // #define MEDIA_MENU_AT_TOP               // Force the media menu to be listed on the top of the main menu
 
-  #define EVENT_GCODE_SD_ABORT       "G28XY"   // G-code to run on SD Abort Print (e.g., "G28XY" or "G27")
+  #define EVENT_GCODE_SD_ABORT       "G28XY" // G-code to run on SD Abort Print (e.g., "G28XY" or "G27")
 
   #if ENABLED(PRINTER_EVENT_LEDS)
-    #define PE_LEDS_COMPLETED_TIME   (30 * 60) // (seconds) Time to keep the LED "done" color before restoring normal illumination
+    #define PE_LEDS_COMPLETED_TIME   (30*60) // (seconds) Time to keep the LED "done" color before restoring normal illumination
   #endif
 
   /**
@@ -2118,9 +2118,9 @@
 #define LIN_ADVANCE
 #if ENABLED(LIN_ADVANCE)
   // #define EXTRA_LIN_ADVANCE_K // Enable for second linear advance constants
-  #define LIN_ADVANCE_K   0.6 // Unit: mm compression per 1mm/s extruder speed
+  #define LIN_ADVANCE_K         0.6 // Unit: mm compression per 1mm/s extruder speed
   // #define LA_DEBUG            // If enabled, this will generate debug information output over USB.
-  #define EXPERIMENTAL_SCURVE // Enable this option to permit S-Curve Acceleration
+  #define EXPERIMENTAL_SCURVE       // Enable this option to permit S-Curve Acceleration
   // #define ALLOW_LOW_EJERK     // Allow a DEFAULT_EJERK value of <10. Recommended for direct drive hotends.
 #endif
 
@@ -2571,20 +2571,20 @@
   // #define TOOLCHANGE_FILAMENT_SWAP
   #if ENABLED(TOOLCHANGE_FILAMENT_SWAP)
     // Load / Unload
-    #define TOOLCHANGE_FS_LENGTH                12         // (mm) Load / Unload length
-    #define TOOLCHANGE_FS_EXTRA_RESUME_LENGTH   0          // (mm) Extra length for better restart. Adjust with LCD or M217 B.
-    #define TOOLCHANGE_FS_RETRACT_SPEED         (50 * 60)  // (mm/min) (Unloading)
-    #define TOOLCHANGE_FS_UNRETRACT_SPEED       (25 * 60)  // (mm/min) (On SINGLENOZZLE or Bowden loading must be slowed down)
+    #define TOOLCHANGE_FS_LENGTH                12       // (mm) Load / Unload length
+    #define TOOLCHANGE_FS_EXTRA_RESUME_LENGTH   0        // (mm) Extra length for better restart. Adjust with LCD or M217 B.
+    #define TOOLCHANGE_FS_RETRACT_SPEED         (50*60)  // (mm/min) (Unloading)
+    #define TOOLCHANGE_FS_UNRETRACT_SPEED       (25*60)  // (mm/min) (On SINGLENOZZLE or Bowden loading must be slowed down)
 
     // Longer prime to clean out a SINGLENOZZLE
-    #define TOOLCHANGE_FS_EXTRA_PRIME           0          // (mm) Extra priming length
-    #define TOOLCHANGE_FS_PRIME_SPEED           (4.6 * 60) // (mm/min) Extra priming feedrate
-    #define TOOLCHANGE_FS_WIPE_RETRACT          0          // (mm) Retract before cooling for less stringing, better wipe, etc.
+    #define TOOLCHANGE_FS_EXTRA_PRIME           0        // (mm) Extra priming length
+    #define TOOLCHANGE_FS_PRIME_SPEED           (4.6*60) // (mm/min) Extra priming feedrate
+    #define TOOLCHANGE_FS_WIPE_RETRACT          0        // (mm) Retract before cooling for less stringing, better wipe, etc.
 
     // Cool after prime to reduce stringing
-    #define TOOLCHANGE_FS_FAN                   -1         // Fan index or -1 to skip
-    #define TOOLCHANGE_FS_FAN_SPEED             255        // 0-255
-    #define TOOLCHANGE_FS_FAN_TIME              10         // (seconds)
+    #define TOOLCHANGE_FS_FAN                   -1       // Fan index or -1 to skip
+    #define TOOLCHANGE_FS_FAN_SPEED             255      // 0-255
+    #define TOOLCHANGE_FS_FAN_TIME              10       // (seconds)
 
     // Use TOOLCHANGE_FS_PRIME_SPEED feedrate the first time each extruder is primed
     // #define TOOLCHANGE_FS_SLOW_FIRST_PRIME
@@ -2618,7 +2618,7 @@
     */
   // #define TOOLCHANGE_PARK
   #if ENABLED(TOOLCHANGE_PARK)
-    #define TOOLCHANGE_PARK_XY            { X_MIN_POS + 10, Y_MIN_POS + 10 }
+    #define TOOLCHANGE_PARK_XY            { X_MIN_POS+10, Y_MIN_POS+10 }
     #define TOOLCHANGE_PARK_XY_FEEDRATE   6000 // (mm/min)
     // #define TOOLCHANGE_PARK_X_ONLY          // X axis only move
     // #define TOOLCHANGE_PARK_Y_ONLY          // Y axis only move
@@ -2855,7 +2855,7 @@
   #define INTERPOLATE         true
 
   #if AXIS_IS_TMC(X)
-    #define X_CURRENT         1000      // (mA) RMS current. Multiply by 1.414 for peak current.
+    #define X_CURRENT         1200      // (mA) RMS current. Multiply by 1.414 for peak current.
     #define X_CURRENT_HOME    X_CURRENT // (mA) RMS current for sensorless homing
     #define X_MICROSTEPS      16        // 0..256
     #define X_RSENSE          0.11
@@ -2875,7 +2875,7 @@
   #endif
 
   #if AXIS_IS_TMC(Y)
-    #define Y_CURRENT         1000
+    #define Y_CURRENT         1200
     #define Y_CURRENT_HOME    Y_CURRENT
     #define Y_MICROSTEPS      16
     #define Y_RSENSE          0.11
@@ -2895,7 +2895,7 @@
   #endif
 
   #if AXIS_IS_TMC(Z)
-    #define Z_CURRENT         1000
+    #define Z_CURRENT         1200
     #define Z_CURRENT_HOME    Z_CURRENT
     #define Z_MICROSTEPS      16
     #define Z_RSENSE          0.11
@@ -3151,8 +3151,8 @@
     * Use Trinamic's ultra quiet stepping mode.
     * When disabled, Marlin will use spreadCycle stepping mode.
     */
-  // #define STEALTHCHOP_XY
-  // #define STEALTHCHOP_Z
+  #define STEALTHCHOP_XY
+  #define STEALTHCHOP_Z
   // #define STEALTHCHOP_I
   // #define STEALTHCHOP_J
   // #define STEALTHCHOP_K
@@ -3226,7 +3226,7 @@
     * STEALTHCHOP_(XY|Z|E) must be enabled to use HYBRID_THRESHOLD.
     * M913 X/Y/Z/E to live tune the setting
     */
-  // #define HYBRID_THRESHOLD
+  #define HYBRID_THRESHOLD
 
   #define X_HYBRID_THRESHOLD   100 // [mm/s]
   // #define X2_HYBRID_THRESHOLD   100
@@ -3337,7 +3337,6 @@
 
 #endif // HAS_TRINAMIC_CONFIG
 
-<<<<<<< HEAD
 // @section L64XX
 
 /**
@@ -3585,8 +3584,6 @@
   #endif
 
 #endif // HAS_L64XX
-=======
->>>>>>> 9be1de54ae11b20cc3f47008080bc4afb80369c5
 
 // @section i2cbus
 
@@ -3772,8 +3769,8 @@
     #endif
 
     // Define the minimum and maximum test pulse time values for a laser test fire function
-    #define LASER_TEST_PULSE_MIN           1   // Used with Laser Control Menu
-    #define LASER_TEST_PULSE_MAX         999   // Caution: Menu may not show more than 3 characters
+    #define LASER_TEST_PULSE_MIN            1    // Used with Laser Control Menu
+    #define LASER_TEST_PULSE_MAX            999  // Caution: Menu may not show more than 3 characters
 
     /**
       * Laser Safety Timeout
@@ -3846,12 +3843,12 @@
       // #define LASER_POWER_INLINE_INVERT
 
       /**
-       * Continuously apply inline power. ('M3 S3' == 'G1 S3' == 'M3 S3 I')
-       *
-       * The laser might do some weird things, so only enable this
-       * feature if you understand the implications.
-       */
-      //#define LASER_POWER_INLINE_CONTINUOUS
+        * Continuously apply inline power. ('M3 S3' == 'G1 S3' == 'M3 S3 I')
+        *
+        * The laser might do some weird things, so only enable this
+        * feature if you understand the implications.
+        */
+      // #define LASER_POWER_INLINE_CONTINUOUS
 
     #else
 
@@ -4302,7 +4299,7 @@
   // Default settings for encoders which are enabled, but without settings configured above.
   #define I2CPE_DEF_TYPE             I2CPE_ENC_TYPE_LINEAR
   #define I2CPE_DEF_ENC_TICKS_UNIT   2048
-  #define I2CPE_DEF_TICKS_REV        (16 * 200)
+  #define I2CPE_DEF_TICKS_REV        (16*200)
   #define I2CPE_DEF_EC_METHOD        I2CPE_ECM_NONE
   #define I2CPE_DEF_EC_THRESH        0.1
 
@@ -4341,9 +4338,9 @@
   // #define INVERT_JOY_Z  // Enable if Z direction is reversed
 
   // Use M119 with JOYSTICK_DEBUG to find reasonable values after connecting:
-  #define JOY_X_LIMITS   { 5600, 8190 - 100, 8190 + 100, 10800 } // min, deadzone start, deadzone end, max
-  #define JOY_Y_LIMITS   { 5600, 8250 - 100, 8250 + 100, 11000 }
-  #define JOY_Z_LIMITS   { 4800, 8080 - 100, 8080 + 100, 11550 }
+  #define JOY_X_LIMITS   { 5600, 8190-100, 8190+100, 10800 } // min, deadzone start, deadzone end, max
+  #define JOY_Y_LIMITS   { 5600, 8250-100, 8250+100, 11000 }
+  #define JOY_Z_LIMITS   { 4800, 8080-100, 8080+100, 11550 }
   // #define JOYSTICK_DEBUG
 #endif
 

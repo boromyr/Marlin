@@ -22,20 +22,20 @@
 #pragma once
 
 /**
- * Configuration.h
- *
- * Basic settings such as:
- *
- * - Type of electronics
- * - Type of temperature sensor
- * - Printer geometry
- * - Endstop configuration
- * - LCD controller
- * - Extra features
- *
- * Advanced settings can be found in Configuration_adv.h
- */
-#define CONFIGURATION_H_VERSION 02010100
+  * Configuration.h
+  *
+  * Basic settings such as:
+  *
+  * - Type of electronics
+  * - Type of temperature sensor
+  * - Printer geometry
+  * - Endstop configuration
+  * - LCD controller
+  * - Extra features
+  *
+  * Advanced settings can be found in Configuration_adv.h
+  */
+#define CONFIGURATION_H_VERSION   02010100
 
 // ===========================================================================
 // ============================= Getting Started =============================
@@ -57,14 +57,14 @@
   *                      https://www.thingiverse.com/thing:1278865
   */
 
-//===========================================================================
-//========================== DELTA / SCARA / TPARA ==========================
-//===========================================================================
+// ===========================================================================
+// ========================== DELTA / SCARA / TPARA ==========================
+// ===========================================================================
 //
 // Download configurations from the link above and customize for your machine.
 // Examples are located in config/examples/delta, .../SCARA, and .../TPARA.
 //
-//===========================================================================
+// ===========================================================================
 
 // @section info
 
@@ -96,7 +96,7 @@
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD   BOARD_LONGER3D_LKx_PRO
+  #define MOTHERBOARD     BOARD_LONGER3D_LKx_PRO
 #endif
 
 /**
@@ -107,7 +107,7 @@
   *
   * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
   */
-#define SERIAL_PORT     0
+#define SERIAL_PORT       0
 
 /**
   * Serial Port Baud Rate
@@ -120,7 +120,7 @@
   *
   * :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000]
   */
-#define BAUDRATE        250000
+#define BAUDRATE          250000
 // #define BAUD_RATE_GCODE     // Enable G-code M575 to set the baud rate
 
 #define UART
@@ -131,10 +131,10 @@
 #define DGUS_LCD_UI_RELOADED
 
 #ifdef DGUS_LCD_UI_RELOADED
-  #define HAS_DGUS_LCD   1
+  #define HAS_DGUS_LCD    1
 #endif
 
-#define LCD_HEIGHT       4 // number of message lines in the wait screen
+#define LCD_HEIGHT        4 // number of message lines in the wait screen
 // #define DEBUG_DGUSLCD
 // #define FILAMENT_RUNOUT_SENSOR_DEBUG
 
@@ -889,15 +889,15 @@
 #endif
 
 // Enable for an articulated robot (robot arm). Joints are directly mapped to axes (no kinematics).
-//#define ARTICULATED_ROBOT_ARM
+// #define ARTICULATED_ROBOT_ARM
 
 // For a hot wire cutter with parallel horizontal axes (X, I) where the heights of the two wire
 // ends are controlled by parallel axes (Y, J). Joints are directly mapped to axes (no kinematics).
-//#define FOAMCUTTER_XYUV
+// #define FOAMCUTTER_XYUV
 
-//===========================================================================
-//============================== Endstop Settings ===========================
-//===========================================================================
+// ===========================================================================
+// ============================== Endstop Settings ===========================
+// ===========================================================================
 
 // @section homing
 
@@ -1244,8 +1244,8 @@
 // A probe deployed by moving the x-axis, such as the Wilson II's rack-and-pinion probe designed by Marty Rice.
 // #define RACK_AND_PINION_PROBE
 #if ENABLED(RACK_AND_PINION_PROBE)
-  #define Z_PROBE_DEPLOY_X  X_MIN_POS
-  #define Z_PROBE_RETRACT_X X_MAX_POS
+  #define Z_PROBE_DEPLOY_X    X_MIN_POS
+  #define Z_PROBE_RETRACT_X   X_MAX_POS
 #endif
 
 // Duet Smart Effector (for delta printers) - https://bit.ly/2ul5U7J
@@ -1256,12 +1256,12 @@
 #endif
 
 /**
- * Use StallGuard2 to probe the bed with the nozzle.
- * Requires stallGuard-capable Trinamic stepper drivers.
- * CAUTION: This can damage machines with Z lead screws.
- *          Take extreme care when setting up this feature.
- */
-//#define SENSORLESS_PROBING
+  * Use StallGuard2 to probe the bed with the nozzle.
+  * Requires stallGuard-capable Trinamic stepper drivers.
+  * CAUTION: This can damage machines with Z lead screws.
+  *          Take extreme care when setting up this feature.
+  */
+// #define SENSORLESS_PROBING
 
 //
 // For Z_PROBE_ALLEN_KEY see the Delta example configurations.
@@ -1314,13 +1314,13 @@
 #define PROBING_MARGIN                    10
 
 // X and Y axis travel speed (mm/min) between probes
-#define XY_PROBE_FEEDRATE                 (133 * 60)
+#define XY_PROBE_FEEDRATE                 (133*60)
 
 // Feedrate (mm/min) for the first approach when double-probing (MULTIPLE_PROBING == 2)
-#define Z_PROBE_FEEDRATE_FAST             (4 * 60)
+#define Z_PROBE_FEEDRATE_FAST             (4*60)
 
 // Feedrate (mm/min) for the "accurate" probe of each point
-#define Z_PROBE_FEEDRATE_SLOW             (Z_PROBE_FEEDRATE_FAST / 2)
+#define Z_PROBE_FEEDRATE_SLOW             (Z_PROBE_FEEDRATE_FAST/2)
 
 /**
   * Probe Activation Switch
@@ -1840,11 +1840,11 @@
 #define LCD_BED_TRAMMING
 
 #if ENABLED(LCD_BED_TRAMMING)
-  #define BED_TRAMMING_INSET_LFRB { 30, 30, 30, 30 }  // (mm) Left, Front, Right, Back insets
-  #define BED_TRAMMING_HEIGHT      0.0        // (mm) Z height of nozzle at leveling points
-  #define BED_TRAMMING_Z_HOP       4.0        // (mm) Z height of nozzle between leveling points
-  //#define BED_TRAMMING_INCLUDE_CENTER       // Move to the center after the last corner
-  //#define BED_TRAMMING_USE_PROBE
+  #define BED_TRAMMING_INSET_LFRB          { 30, 30, 30, 30 } // (mm) Left, Front, Right, Back insets
+  #define BED_TRAMMING_HEIGHT              0.0 // (mm) Z height of nozzle at leveling points
+  #define BED_TRAMMING_Z_HOP               4.0 // (mm) Z height of nozzle between leveling points
+  // #define BED_TRAMMING_INCLUDE_CENTER       // Move to the center after the last corner
+  // #define BED_TRAMMING_USE_PROBE
   #if ENABLED(BED_TRAMMING_USE_PROBE)
     #define BED_TRAMMING_PROBE_TOLERANCE   0.1 // (mm)
     #define BED_TRAMMING_VERIFY_RAISED         // After adjustment triggers the probe, re-probe to verify
@@ -1909,7 +1909,7 @@
 #endif
 
 // Homing speeds (linear=mm/min, rotational=°/min)
-#define HOMING_FEEDRATE_MM_M      { (50 * 60), (50 * 60), (4 * 60) }
+#define HOMING_FEEDRATE_MM_M      { (50*60), (50*60), (4*60) }
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS
@@ -2047,7 +2047,7 @@
 
 #if ENABLED(NOZZLE_PARK_FEATURE)
   // Specify a park position as { X, Y, Z_raise }
-  #define NOZZLE_PARK_POINT         { (X_MIN_POS + 10), (Y_MAX_POS - 10), 20 }
+  #define NOZZLE_PARK_POINT         { (X_MIN_POS+10), (Y_MAX_POS-10), 20 }
   #define NOZZLE_PARK_MOVE          0   // Park motion: 0 = XY Move, 1 = X Only, 2 = Y Only, 3 = X before Y, 4 = Y before X
   #define NOZZLE_PARK_Z_RAISE_MIN   2   // (mm) Always raise Z by at least this distance
   #define NOZZLE_PARK_XY_FEEDRATE   100 // (mm/s) X and Y axes feedrate (also used for delta Z axis)
@@ -2102,8 +2102,8 @@
 
   // Specify positions for each tool as { { X, Y, Z }, { X, Y, Z } }
   // Dual hotend system may use { {  -20, (Y_BED_SIZE / 2), (Z_MIN_POS + 1) },  {  420, (Y_BED_SIZE / 2), (Z_MIN_POS + 1) }}
-  #define NOZZLE_CLEAN_START_POINT     { {  30, 30, (Z_MIN_POS + 1) } }
-  #define NOZZLE_CLEAN_END_POINT       { { 100, 60, (Z_MIN_POS + 1) } }
+  #define NOZZLE_CLEAN_START_POINT     { {  30, 30, (Z_MIN_POS+1) } }
+  #define NOZZLE_CLEAN_END_POINT       { { 100, 60, (Z_MIN_POS+1) } }
 
   // Circular pattern radius
   #define NOZZLE_CLEAN_CIRCLE_RADIUS   6.5
@@ -2653,11 +2653,11 @@
 // Silvergate GLCD controller
 // https://github.com/android444/Silvergate
 //
-//#define SILVER_GATE_GLCD_CONTROLLER
+// #define SILVER_GATE_GLCD_CONTROLLER
 
-//=============================================================================
-//==============================  OLED Displays  ==============================
-//=============================================================================
+// =============================================================================
+// ==============================  OLED Displays  ==============================
+// =============================================================================
 
 //
 // SSD1306 OLED full graphics generic display
@@ -2933,11 +2933,11 @@
 //
 // Ender-3 v2 OEM display. A DWIN display with Rotary Encoder.
 //
-//#define DWIN_CREALITY_LCD           // Creality UI
-//#define DWIN_LCD_PROUI              // Pro UI by MRiscoC
-//#define DWIN_CREALITY_LCD_JYERSUI   // Jyers UI by Jacob Myers
-//#define DWIN_MARLINUI_PORTRAIT      // MarlinUI (portrait orientation)
-//#define DWIN_MARLINUI_LANDSCAPE     // MarlinUI (landscape orientation)
+// #define DWIN_CREALITY_LCD           // Creality UI
+// #define DWIN_LCD_PROUI              // Pro UI by MRiscoC
+// #define DWIN_CREALITY_LCD_JYERSUI   // Jyers UI by Jacob Myers
+// #define DWIN_MARLINUI_PORTRAIT      // MarlinUI (portrait orientation)
+// #define DWIN_MARLINUI_LANDSCAPE     // MarlinUI (landscape orientation)
 
 //
 // Touch Screen Settings
